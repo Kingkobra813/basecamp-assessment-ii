@@ -23,8 +23,8 @@ message["text"]="Party Town!"
 
 // CODE HERE
 var adjustCount = {
-  upVote:function(num){return num++},
-  downVote:function(num){return num--},
+  upVote:function(num){return num+1;},
+  downVote:function(num){return num-1;},
 };
 // #5 Create an array called 'myFriends' with four of your friends names
 
@@ -48,10 +48,18 @@ var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly() {
   // CODE HERE
-}
+var evensArray = [];
+  for(i=0;i < myNumbers.length; i++){
+    if((myNumbers[i]%2)===0) {
+      evensArray.push(myNumbers[i]);
+    }
 
+  } return evensArray;
+}
+evensOnly();
 // #9 Using filter(), return only your friends of the array of people below. Assign it to a variable called 'trueFriends'.
 // CODE HERE
+
 var peopleIknow = [
   { name: "Steve", friend: true },
   { name: "Dan", friend: false },
@@ -60,7 +68,20 @@ var peopleIknow = [
   { name: "Michelle", friend: false },
   { name: "Holly", friend: true }
 ];
+var trueFriends = peopleIknow.filter(function(person) {
+  return person.friend === true;
+});
+console.log(trueFriends);
 
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+var indexes = [];
+function indexFinder(arr){
+  for(i=0; i < arr.length; i++){
+      indexes.push(i);
+  }
+  return indexes;
+};
+indexFinder(randomNumbers);
+console.log(indexes);
