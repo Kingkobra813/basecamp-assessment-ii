@@ -4,12 +4,12 @@
 var me = {
   firstname:"Adam",
   age:31,
-  state:"utah",
+  state:"Utah",
 };
 // #2 Add a new key/value pair to the me object using dot notation. The new key should be 'faveColor' and set it to your favorite color as a string
 
 //CODE HERE
-
+me.faveColor="Green";
 // #3 Below is an object, 'message'. Below it, add a 'text' key using bracket notation and assign it a string of whatever you would like.
 //DON'T TOUCH THE CODE BELOW
 var message = {
@@ -18,25 +18,30 @@ var message = {
 };
 //DON'T TOUCH THE CODE ABOVE
 // CODE HERE
-
+message["text"]="Party Town!"
 // #4 Create an object called 'adjustCount' and create two methods. One called 'upVote' and one called 'downVote'. upVote should take in a number and add one to it and downVote should take in a number and minus one from it.
 
 // CODE HERE
-
+var adjustCount = {
+  upVote:function(num){return num++},
+  downVote:function(num){return num--},
+};
 // #5 Create an array called 'myFriends' with four of your friends names
 
 // CODE HERE
-
+var myFriends = [
+  "Kenny", "Cody", "Paul", "Casey",
+];
 // #6 Add a fifth friends name to the end of your myFriends array
 
 // CODE HERE
-
+myFriends.push("Berkeley");
 // #7 Create a 'myArrayCopy' variable. It should equal the myArray variable. Use the built in JavaScript method to create a copy.
 //DON'T TOUCH THE CODE BELOW
 var myArray = [1, 2, 3, 4];
 //DON'T TOUCH THE CODE ABOVE
 // CODE HERE
-
+var myArrayCopy = myArray.slice();
 // #8 Below is a array, myNumbers. Create a function called 'evensOnly' that returns the 'evensArray' of only even numbers
 //DON'T TOUCH THE CODE BELOW
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
